@@ -71,6 +71,7 @@ if __name__ == '__main__':
 
     for epoch in range(args.epoch):
         model.train()
+        model = model.to(device)
         train_loss = 0
         logger.info(f"training epoch {epoch+1}")
         for batch in tqdm(train_loader):
